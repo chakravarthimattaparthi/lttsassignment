@@ -7,13 +7,12 @@ import { By } from "@angular/platform-browser";
 describe('CoursesComponent', () => {
   let component: CoursesComponent;
   let fixture: ComponentFixture<CoursesComponent>;
-  let coursesList =  [{
+  let testCoursesList =  [{
     courseTitle: "PVS800-578",
     courseDes: "Expert Hands On Training",
-    coursePrice: 143,
+    coursePrice: 123,
     courseRating: 3,
     courseDuration: "23 July 2020 - 30 July 2020",
-    courseImg: "course1.jpg"
   }];
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -27,20 +26,28 @@ describe('CoursesComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CoursesComponent);
     component = fixture.componentInstance;
-    component.coursesList = coursesList
+    component.coursesList = testCoursesList;
     fixture .detectChanges();
 })
 
   it('should create', () => {
-    component.coursesList = coursesList;
+    component.coursesList = testCoursesList;
     expect(component).toBeTruthy();
   });
-  it('Course List Should Be Render',()=>{
+  it('Check For First Course Details',()=>{
     const fixture = TestBed.createComponent(CoursesComponent);
-    component.coursesList = coursesList;
+    const courseTile = component.coursesList[0].courseTitle;
+    const courseDes = component.coursesList[0].courseDes;
+    const coursePrice = component.coursesList[0].coursePrice;
+    const courseRating = component.coursesList[0].courseRating;
+    const courseDuration = component.coursesList[0].courseDuration;
+    const courseImg = component.coursesList[0].courseImg;
     fixture.detectChanges();
-    const compiled = fixture.nativeElement;
-    console.log(compiled)
-    //expect(compiled.querySelector('app-courses').textContent).toContain('PVS800-578');
+    expect(courseTile).toBe(testCoursesList[0].courseTitle);
+    expect(courseDes).toBe(testCoursesList[0].courseDes);
+    expect(coursePrice).toBe(testCoursesList[0].coursePrice)
+    expect(courseRating).toBe(testCoursesList[0].courseRating);
+    expect(courseDuration).toBe(testCoursesList[0].courseDuration);
+
   })
 });
