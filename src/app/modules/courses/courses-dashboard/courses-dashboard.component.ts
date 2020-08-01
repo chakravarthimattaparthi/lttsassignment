@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoursesDashboardComponent implements OnInit {
   public nearByCourses = [{
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-192",
     courseDes: "Expert Hands On Training",
     coursePrice: 143,
     courseRating: 3,
@@ -15,7 +15,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course1.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-485",
     courseDes: "Expert Hands On Training",
     coursePrice: 210,
     courseRating: 2,
@@ -23,7 +23,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course2.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-284",
     courseDes: "Expert Hands On Training",
     coursePrice: 150,
     courseRating: 4,
@@ -31,7 +31,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course3.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-058",
     courseDes: "Expert Hands On Training",
     coursePrice: 222,
     courseRating: 5,
@@ -39,7 +39,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course4.jpg"
   }];
   public relativeCourses = [{
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-475",
     courseDes: "Expert Hands On Training",
     coursePrice: 310,
     courseRating: 3,
@@ -47,7 +47,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course5.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-028",
     courseDes: "Expert Hands On Training",
     coursePrice: 317,
     courseRating: 4,
@@ -55,7 +55,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course6.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-231",
     courseDes: "Expert Hands On Training",
     coursePrice: 242,
     courseRating: 4,
@@ -63,7 +63,7 @@ export class CoursesDashboardComponent implements OnInit {
     courseImg: "course7.jpg"
   },
   {
-    courseTitle: "PVS800-578",
+    courseTitle: "PVS800-281",
     courseDes: "Expert Hands On Training",
     coursePrice: 220,
     courseRating: 5,
