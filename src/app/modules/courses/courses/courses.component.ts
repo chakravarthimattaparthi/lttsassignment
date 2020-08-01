@@ -1,7 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
-import { DialogManagerService } from '@abb/abb-common-ux-angular';
 import { CourseDetailModalComponent } from '../course-detail-modal/course-detail-modal.component';
-import { CoursesService } from "../services/courses.service";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-courses',
@@ -10,25 +9,17 @@ import { CoursesService } from "../services/courses.service";
 })
 export class CoursesComponent implements OnInit {
   @Input() coursesList: any;
-  constructor(private dilogService:DialogManagerService,private courserService: CoursesService) { }
+  public user = {
+    name: 'Izzat Nadiri',
+    age: 26
+    }
+  constructor(public modalService:NgbModal) { }
 
   ngOnInit(): void {
      
   }
   showMore(index) {
-    this.courserService.setCousesList(this.coursesList[index]);
-    console.log(this.coursesList)
-    this.dilogService.showDialog(CourseDetailModalComponent,this.getDilogOptions())
-  }
-  getDilogOptions() {
-    const options = {
-      className: '',
-      closeOnEscape: true,
-      closeOnLostFocus: true,
-      dimBackground: true,
-      hideBackground: false,
-      data: this.coursesList
-    };
-    return options;
+    const modalRef = this.modalService.open(CourseDetailModalComponent); 
+    modalRef.componentInstance.course = this.coursesList[index];
   }
 }

@@ -1,8 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap');
 body {
-    background: #f2f2f2;
+    background: #f2f2f2 !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.root {
+    font-family: 'Open Sans', sans-serif !important;
 }
 
 .main-wrapper {
@@ -22,3 +28,20 @@ body {
     font-weight: normal;
     color: #737373;
 }
+
+.course-title {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #808080;
+}
+
+.course-full-dsc {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+
+/* Importing Bootstrap SCSS file. */
+
+@import '~bootstrap/scss/bootstrap';
