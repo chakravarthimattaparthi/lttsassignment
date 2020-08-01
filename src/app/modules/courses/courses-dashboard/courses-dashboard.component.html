@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="main-wrapper">
+        <div class="courses-wrapper">
+            <h4 class="courses-title">Courses Near <span class="color-dark">You</span></h4>
+            <app-courses [coursesList]="nearByCourses"></app-courses>
+        </div>
+        <div class="courses-wrapper">
+            <h4 class="courses-title">Courses <span class="color-dark">Recommended</span> for you</h4>
+            <app-courses [coursesList]="relativeCourses"></app-courses>
+        </div>
+    </div>
+</div>

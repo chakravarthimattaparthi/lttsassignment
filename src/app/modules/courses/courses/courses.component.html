@@ -1,0 +1,24 @@
+<div class="courses-list">
+    <div class="row">
+        <div *ngFor="let course of coursesList;let i = index" class="col-md-3 col-sm-6 col-xs-12">
+            <div class="course-block">
+                <img src="../../../../assets/images/{{course.courseImg}}">
+                <div class="course-details-wrapper">
+                    <h6 class="course-title" id="course-title">{{course.courseTitle}}</h6>
+                    <p class="course-des">{{course.courseDes}}</p>
+                    <span class="course-price">{{course.coursePrice}}$</span>
+                    <div class="rating">
+                        <span *ngFor="let i of [].constructor(5),let j=index" [class]="j<course.courseRating ? 'fa fa-star': 'fa fa-star-o'"></span>
+
+                    </div>
+                    <span class="course-duration">{{course.courseDuration}}</span>
+                    <div class="show-more-button">
+                        <abb-button title="Show More" sizeClass="small" (click)="showMore(i)" type="primary-blue" text="Show More">Show More
+                        </abb-button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
